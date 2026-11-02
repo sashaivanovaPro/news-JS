@@ -1,5 +1,5 @@
-import App from './components/app/app';
+import createApp from './components/app/createApp';
 import './global.css';
 
-const app = new App();
+const app = createApp();
 app.start();
