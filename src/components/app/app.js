@@ -1,9 +1,12 @@
 import AppController from '../controller/controller';
+import AppLoader from '../controller/appLoader';
+import NewsApi from '../api/newsApi';
 import { AppView } from '../view/appView';
 
 class App {
     constructor() {
-        this.controller = new AppController();
+        const api = new NewsApi(new AppLoader());
+        this.controller = new AppController(api);
         this.view = new AppView();
     }
 
