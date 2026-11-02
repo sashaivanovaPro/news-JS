@@ -32,6 +32,8 @@ class AppController {
             return;
         }
 
+        newsContainer.querySelector('.source__item[aria-pressed="true"]')?.setAttribute('aria-pressed', 'false');
+        sourceElement.setAttribute('aria-pressed', 'true');
         newsContainer.setAttribute('data-source', sourceId);
         this.api.getNews(sourceId, callback);
     }
